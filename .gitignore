@@ -1,33 +1,59 @@
-HELP.md
-target/
-.mvn/wrapper/maven-wrapper.jar
-!**/src/main/**/target/
-!**/src/test/**/target/
+# ---------------------
+# BACKEND (Java + Maven)
+# ---------------------
+/target/
+/.mvn/
+/*.iml
+*.log
+*.class
+*.jar
+*.war
+*.ear
 
-### STS ###
-.apt_generated
-.classpath
-.factorypath
-.project
-.settings
-.springBeans
-.sts4-cache
-
-### IntelliJ IDEA ###
-.idea
+# IntelliJ IDEA
+.idea/
 *.iws
-*.iml
 *.ipr
+*.iml
+out/
 
-### NetBeans ###
-/nbproject/private/
-/nbbuild/
-/dist/
-/nbdist/
-/.nb-gradle/
-build/
-!**/src/main/**/build/
-!**/src/test/**/build/
+# Eclipse
+.project
+.classpath
+.settings/
+bin/
 
-### VS Code ###
+# VS Code
 .vscode/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# ---------------------
+# FRONTEND (Angular)
+# ---------------------
+/node_modules/
+/dist/
+/.angular/
+
+# Angular CLI cache
+.angular/cache/
+
+# Ambiente
+.env
+.env.local
+
+# Teste
+coverage/
+karma-*.log
+testem.log
+
+# ---------------------
+# GERAL
+# ---------------------
+*.swp
+*.swo
+*.tmp
+*.bak
+*.orig
