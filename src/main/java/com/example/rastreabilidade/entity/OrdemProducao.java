@@ -1,8 +1,11 @@
 package com.example.rastreabilidade.entity;
 
-import java.time.LocalDate;
+import java.util.List;
 
+import jakarta.persistence.ElementCollection;
 import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -14,8 +17,19 @@ public class OrdemProducao {
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   private Long id;
-  private String codigo;
-  private LocalDate dataCriacao;
-  private String status;
+
+  private String numeroOrdem;
+  private String numeroLote;
+
+  @Enumerated(EnumType.STRING)
+  private EnumTipoFarinha farinhaTipo;
+
+  private String marcaFarinha;
+
+  @ElementCollection
+  private List<String> notasUsadas;
+
+  private Double pesoTotal;
+  private String statusOp;
 
 }
