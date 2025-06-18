@@ -1,7 +1,10 @@
 package com.example.rastreabilidade.entity;
 
+import java.util.ArrayList;
 import java.util.List;
 
+import jakarta.persistence.CollectionTable;
+import jakarta.persistence.Column;
 import jakarta.persistence.ElementCollection;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
@@ -27,7 +30,7 @@ public class OrdemProducao {
   private String marcaFarinha;
 
   @ElementCollection
-  private List<String> notasUsadas;
+  private List<String> notasUsadas = new ArrayList<>();
 
   private Double pesoTotal;
   private String statusOp;
